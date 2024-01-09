@@ -1,0 +1,119 @@
+<div class="flex-col rounded-lg bg-white px-8 py-8 dark:bg-night-700 sm:flex-row">
+  <!-- (ngSubmit)="addCompany()"> -->
+    <form [formGroup]="addform">
+        <h3 mat-dialog-title class="text-xs uppercase text-gray-400 dark:text-night-300">
+          {{ oCompany!=null ? 'Editar empresa' : 'Nuevo empresa'}}
+        </h3>
+        <div mat-dialog-content>
+    
+           
+            <div class="form__group">
+                <div class="relative">
+                  <input type="hidden" id="id" [ngClass]="{ 'is__invalid-input': submitted && f['id'].errors }"
+                    class="peer block" placeholder=" " formControlName="id" />
+                
+                </div>
+              
+            </div>
+    
+            <div class="form__group">
+                <div class="relative">
+                  <input type="text" id="empresa" [ngClass]="{ 'is__invalid-input': submitted && f['empresa'].errors }"
+                    class="peer block" placeholder=" " formControlName="empresa" />
+                  <label for="empresa"
+                    class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+                    Empresa
+                  </label>
+                </div>
+                <div *ngIf="submitted && f['empresa'].errors" class="is__invalid-error">
+                  <div *ngIf="f['empresa'].errors['required']">Favor de colocar empresa</div>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="relative">
+                  <input type="text" id="razon_social" [ngClass]="{ 'is__invalid-input': submitted && f['razon_social'].errors }"
+                    class="peer block" placeholder=" " formControlName="razon_social" />
+                  <label for="razon_social"
+                    class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+                    Razon social
+                  </label>
+                </div>
+                <div *ngIf="submitted && f['razon_social'].errors" class="is__invalid-error">
+                  <div *ngIf="f['razon_social'].errors['required']">Favor de colocar razon social</div>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="relative">
+                  <input type="text" id="direccion_fiscal" [ngClass]="{ 'is__invalid-input': submitted && f['direccion_fiscal'].errors }"
+                    class="peer block" placeholder=" " formControlName="direccion_fiscal" />
+                  <label for="direccion_fiscal"
+                    class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+                    Direccion
+                  </label>
+                </div>
+                <div *ngIf="submitted && f['direccion_fiscal'].errors" class="is__invalid-error">
+                  <div *ngIf="f['direccion_fiscal'].errors['required']">Favor de colocar direccion_fiscal</div>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="relative">
+                  <input type="text" id="rfc" [ngClass]="{ 'is__invalid-input': submitted && f['rfc'].errors }"
+                    class="peer block" placeholder=" " formControlName="rfc" />
+                  <label for="rfc"
+                    class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+                    RFC
+                  </label>
+                </div>
+                <div *ngIf="submitted && f['rfc'].errors" class="is__invalid-error">
+                  <div *ngIf="f['rfc'].errors['required']">Favor de colocar rfc</div>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="relative">
+                  <input type="text" id="cp" [ngClass]="{ 'is__invalid-input': submitted && f['cp'].errors }"
+                    class="peer block" placeholder=" " formControlName="cp" />
+                  <label for="cp"
+                    class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+                    Código postal
+                  </label>
+                </div>
+                <div *ngIf="submitted && f['cp'].errors" class="is__invalid-error">
+                  <div *ngIf="f['cp'].errors['required']">Favor de colocar código postal</div>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="relative">
+                  <input type="text" id="ciudad" [ngClass]="{ 'is__invalid-input': submitted && f['ciudad'].errors }"
+                    class="peer block" placeholder=" " formControlName="ciudad" />
+                  <label for="ciudad"
+                    class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+                    Ciudad
+                  </label>
+                </div>
+                <div *ngIf="submitted && f['ciudad'].errors" class="is__invalid-error">
+                  <div *ngIf="f['ciudad'].errors['required']">Favor de colocar ciudad</div>
+                </div>
+            </div>
+   
+    
+          
+        
+        </div>
+        <div mat-dialog-actions>
+          
+            <button mat-flat-button
+            (click)="close()"
+            class="h-10 w-10 items-center justify-center rounded-md bg-gray-200 text-gray-400 dark:bg-night-500 dark:text-night-300">
+            <svg-icon src="assets/icons/heroicons/outline/arrow-uturn-left.svg" [svgClass]="'h-5 w-5'"> </svg-icon>
+            </button>
+            <!-- type="submit" [disabled]="addform.invalid" -->
+            <button mat-flat-button
+                 (click)="oCompany!=null ? editCompany() : addCompany()"
+                class="h-10 w-10 items-center justify-center rounded-md bg-gray-200 text-gray-400 dark:bg-night-500 dark:text-night-300">
+                <svg-icon src="assets/icons/heroicons/outline/check.svg" [svgClass]="'h-5 w-5'"> </svg-icon>
+            </button>
+        </div>
+    </form>
+
+    
+</div>

@@ -1,0 +1,15 @@
+.parent {
+    display: grid;
+    place-items: right;
+}
+.clock {
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  .large-text {
+    font-size: 100px; /* Tamaño de fuente personalizado */
+    font-weight: bold; /* Negrita */
+    color: #007bff; /* Color de texto azul */
+  }

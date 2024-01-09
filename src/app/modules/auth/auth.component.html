@@ -1,0 +1,31 @@
+<div class="flex h-screen w-screen">
+  <div class="auth-bg hidden flex-1 items-center justify-center bg-primary-500 bg-cover lg:flex">
+    <div class="max-w-2xl space-y-4 p-8 text-center text-white">
+      <img src="./assets/images/asistencia-screen.jpg" alt="dashboard widget" />
+      <h1 class="text-4xl font-bold">Omit-Asistencia</h1>
+      <p class="text-xs font-light">
+        Garantizar la puntualidad y la asistencia regular de los empleados para mejorar la productividad y el cumplimiento de los horarios laborales en la empresa. 
+        <span class="cursor-pointer font-medium text-yellow-400">Cumplir con las políticas laborales</span> Asegurarse de que los empleados cumplan con las políticas laborales establecidas por la empresa, incluyendo los horarios de trabajo y las horas extras. 
+        <span class="cursor-pointer font-medium text-yellow-400">Automatizar el registro de asistencia.</span> Implementar un sistema de control de asistencia automatizado que permita un registro preciso y eficiente de las horas trabajadas.
+
+        Generar informes de asistencia: Facilitar la generación de informes de asistencia para el seguimiento y la toma de decisiones basadas en datos
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-1 items-center justify-center bg-white dark:bg-night-700">
+    <div class="max-w-md overflow-y-auto px-4 sm:w-[500px]">
+      <!-- logo -->
+      <div class="flex items-center justify-center">
+        <a class="rounded ">
+          <!--  <svg-icon src="assets/icons/omitqr_logo.svg" [svgClass]="'h-13 w-13'"> </svg-icon>logo -->
+          <img src="./assets/images/logo_omit_asis_slogan_fondo_blanco.png" style="width: 200px;height:100px;" alt="dashboard widget" />
+        </a>
+        <b class="text-md pl-3 font-bold text-gray-700 dark:text-white">  </b>
+      </div>
+  
+      <!-- Route -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,45 @@
+<div class="flex-col rounded-lg bg-white px-8 py-8 dark:bg-night-700 sm:flex-row">
+ 
+    <div class="mb-4 flex items-end justify-between">
+        <input type="text"  placeholder="Nombre Empresa" class="text-sm w-full py-2.5 text-gray-400 dark:text-night-200" />
+    <span style="width: 10px;"></span>
+      <button
+       (click)="onclickBuscar()"
+      class="flex h-10 w-10 items-center justify-center rounded-md bg-gray-200 text-gray-400 dark:bg-night-500 dark:text-night-300">
+      <svg-icon src="assets/icons/heroicons/outline/magnifying-glass.svg" [svgClass]="'h-5 w-5'"> </svg-icon>
+    </button>
+    </div>
+  
+    <div class="relative overflow-x-auto">
+      <button
+      (click)="onclickAdd()"
+      class="flex h-7 w-7 items-center justify-center rounded-md bg-gray-200 text-gray-400 dark:bg-night-500 dark:text-night-300">
+      <svg-icon src="assets/icons/heroicons/outline/plus-small.svg" [svgClass]="'h-5 w-5'"> </svg-icon>
+    </button>
+      <table class="w-full table-auto">
+        <!--Table head-->
+        <thead class="text-xs uppercase text-gray-400 dark:text-night-300">
+          <tr>
+            <th class="py-3 text-right">Empresa</th>
+            <th class="py-3 text-right">Direccion</th>
+            <th class="py-3 text-right">RFC</th>
+            <th class="py-3 text-right">CP</th>            
+            <th class="py-3 text-right">Ciudad</th>
+            <th class="py-3 text-right">baja</th>            
+            <th class="py-3 text-right"></th>
+          </tr>
+        </thead>
+        <!--end Table head-->
+        <!--Table body-->
+        <tbody>
+          <tr
+            *ngFor="let oEmpresa of lstEmpresas"
+            [oEmpresa]="oEmpresa"
+            app-company-item
+            class="border-b border-dashed border-gray-200 hover:bg-gray-100 dark:border-night-500 dark:hover:bg-night-600"></tr>
+        </tbody>
+        <!--end::Table body-->
+      </table>
+    </div>
+  </div>
+  
